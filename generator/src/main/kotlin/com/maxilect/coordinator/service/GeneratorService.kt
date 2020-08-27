@@ -31,8 +31,8 @@ class GeneratorService {
 
     fun updateRangeId() {
         val restTemplate = RestTemplate()
-        val fooResourceUrl = "http://coordinator:8080/"
-        val response = restTemplate.getForEntity(fooResourceUrl, ResponseDto::class.java)
+        val coordinatorEndpoint = "http://coordinator:8080/"
+        val response = restTemplate.getForEntity(coordinatorEndpoint, ResponseDto::class.java)
         rangeId = response.body!!.id
     }
 }

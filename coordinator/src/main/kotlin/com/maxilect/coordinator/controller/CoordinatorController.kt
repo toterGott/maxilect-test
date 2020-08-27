@@ -14,4 +14,5 @@ class CoordinatorController {
     fun getRangeId() = RangeIdDto(rangeId.getAndIncrement())
 }
 
+// todo must be in lib module
 data class RangeIdDto(val id: Long)
